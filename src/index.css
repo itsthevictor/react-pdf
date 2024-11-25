@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+button {
+  margin: 50px;
+  border: 2px solid black;
+  background: inherit;
+  padding: 1rem 2rem;
+  border-radius: 12.5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e1e1e;
+  color: white;
+}
