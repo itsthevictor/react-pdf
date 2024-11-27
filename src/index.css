@@ -5,14 +5,22 @@
 }
 
 button {
-  margin: 50px;
   border: 2px solid black;
   background: inherit;
-  padding: 1rem 2rem;
-  border-radius: 12.5px;
+  padding: 0.5rem 1rem 0.35rem 1rem;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  padding: 1.25vh 5vw;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
 }
 
 button:hover {
