@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Menu from "./components/Menu";
 import WebView from "./components/WebView";
+import PDF from "./components/PDF";
+import { PDFViewer } from "@react-pdf/renderer";
 
 const content = {
   title: "Lo! in the orient when the gracious light",
@@ -32,9 +34,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Menu view={view} setView={setView} />
+    <div className="App" style={{ minHeight: "100vh" }}>
+      <Menu view={view} setView={setView} poem={poem} />
       {view === "web" && <WebView poem={poem} />}
+      {view === "pdf" && (
+        <PDFViewer
+          showToolbar={false}
+          style={{ width: "100%", height: "90vh" }}
+        >
+          <PDF poem={poem} />
+        </PDFViewer>
+      )}
     </div>
   );
 }
